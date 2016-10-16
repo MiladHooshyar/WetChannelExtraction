@@ -47,3 +47,7 @@ Before running the code, there are some parameters which should be set in “Run.p
 
 
 After setting the parameters, one can execute “Run.py” to extract the wet segments. The output files will be saved in a folder called “wet_output” in the specified Output folder path. “comb_wet.tif” and “wet_connected.tif” are original and connected wet segments, respectively.
+
+## D. Publications
+
+1. Hooshyar, M., S. Kim, D. Wang, and S. C. Medeiros (2015), Wet channel network extraction by integrating LiDAR intensity and elevation data, Water Resour. Res., 51, 10029–10046, doi:10.1002/2015WR018021.
