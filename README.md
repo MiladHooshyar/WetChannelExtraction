@@ -3,25 +3,25 @@ This is a Python code to extract wet segments using high resolution Digital Elev
 
 ## A. Installation
 
-The code itself does not require installation; however, there are some packages that are required to be installed before running the code.
+The required python library are:
 
-1. “arcpy” library: this library is imbedded in ArcGIS package. If you install ArcGIS in your computer, the “arcpy” library and Python 2.7 will be installed automatically. It is recommended to use 64-bit python which is available on new versions of ArcGIS. 64-bit background geoprocessing is also available for older versions at http://resources.arcgis.com/en/help/main/10.1/index.html#/Background_Geoprocessing_64_bit/002100000040000000/.
+1. ï¿½arcpyï¿½ library: this library is included with ArcGIS package. If you install ArcGIS on your computer, the ï¿½arcpyï¿½ library will be installed automatically. It is recommended to use 64-bit python which is available on new versions of ArcGIS. 64-bit background geoprocessing is also available for older versions at http://resources.arcgis.com/en/help/main/10.1/index.html#/Background_Geoprocessing_64_bit/002100000040000000/.
 
-2. •	“numpy”, “scipy”, “Scikit-learn”, and “matplotlib” libraries: 64-bit version of these libraries can be found at (http://www.lfd.uci.edu/~gohlke/pythonlibs/). Make sure you download the libraries for Python 2.7. The whl files can be installed using pip as illustrated in this video (https://www.youtube.com/watch?v=zPMr0lEMqpo).
+2. ï¿½	ï¿½numpyï¿½, ï¿½scipyï¿½, ï¿½Scikit-learnï¿½, and ï¿½matplotlibï¿½ libraries.
 
 
 ## B. Code structure
 
-1. “Run.py” is the file for setting the parameters and running the code.
+1. ï¿½main.pyï¿½ is the file for setting the parameters and running the code.
 
-2. “Wet_Channel_Extraction.py” is the main code which calls the functions from “Wet_Extraction_Fun.py” to delineate wet segments.
+2. ï¿½Wet_Channel_Extraction.pyï¿½ is the main code which calls the functions from ï¿½Wet_Extraction_Fun.pyï¿½ to delineate wet segments.
 
-3. “Pre_Processing.py” contains the functions to fix the extent of the input rasters.
+3. ï¿½Pre_Processing.pyï¿½ contains the functions to fix the extent of the input rasters.
 
 
 ## C. Inputs
 
-Before running the code, there are some parameters which should be set in “Run.py” including.
+Before running the code, there are some parameters which should be set in ï¿½Run.pyï¿½ including.
 
 1. The path to the bare-earth DEM (ground_DEM).
 
@@ -29,9 +29,9 @@ Before running the code, there are some parameters which should be set in “Run.p
 
 3. The path to the intensity  raster (int_raster)
 
-4. The path to the flow direction grid (flowdir_raster) and valley network (valley_raster). These two rasters can be extracted using the the code available at https://github.com/MiladHooshyar/DrainageNetworkExtraction.git and are saved as “Modified_Fdir_8.tif” and “valley_network.tif”, respectively.
+4. The path to the flow direction grid (flowdir_raster) and valley network (valley_raster). These two rasters can be extracted using the the code available at https://github.com/MiladHooshyar/DrainageNetworkExtraction.git and are saved as ï¿½Modified_Fdir_8.tifï¿½ and ï¿½valley_network.tifï¿½, respectively.
 
-5. The unit of the DEM (unit). It is ‘m’ for meter and ‘ft’ for feet.
+5. The unit of the DEM (unit). It is ï¿½mï¿½ for meter and ï¿½ftï¿½ for feet.
 
 6. The size of the DEM in meters (pix_per_m).
 
@@ -46,8 +46,8 @@ Before running the code, there are some parameters which should be set in “Run.p
 11. The maximum distance between two erroneously disconnected segment (max_gap).
 
 
-After setting the parameters, one can execute “Run.py” to extract the wet segments. The output files will be saved in a folder called “wet_output” in the specified Output folder path. “comb_wet.tif” and “wet_connected.tif” are original and connected wet segments, respectively.
+After setting the parameters, one can execute ï¿½Run.pyï¿½ to extract the wet segments. The output files will be saved in a folder called ï¿½wet_outputï¿½ in the specified Output folder path. ï¿½comb_wet.tifï¿½ and ï¿½wet_connected.tifï¿½ are original and connected wet segments, respectively.
 
 ## D. Publications
 
-1. Hooshyar, M., S. Kim, D. Wang, and S. C. Medeiros (2015), Wet channel network extraction by integrating LiDAR intensity and elevation data, Water Resour. Res., 51, 10029–10046, doi:10.1002/2015WR018021.
+1. Hooshyar, M., S. Kim, D. Wang, and S. C. Medeiros (2015), Wet channel network extraction by integrating LiDAR intensity and elevation data, Water Resour. Res., 51, 10029ï¿½10046, doi:10.1002/2015WR018021.
