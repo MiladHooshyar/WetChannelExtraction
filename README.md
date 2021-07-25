@@ -5,23 +5,23 @@ This is a Python code to extract wet segments using high resolution Digital Elev
 
 The required python library are:
 
-1. �arcpy� library: this library is included with ArcGIS package. If you install ArcGIS on your computer, the �arcpy� library will be installed automatically. It is recommended to use 64-bit python which is available on new versions of ArcGIS. 64-bit background geoprocessing is also available for older versions at http://resources.arcgis.com/en/help/main/10.1/index.html#/Background_Geoprocessing_64_bit/002100000040000000/.
+1. arcpy library: this library is included with ArcGIS package. If you install ArcGIS on your computer, the arcpy library will be installed automatically. It is recommended to use 64-bit python which is available on new versions of ArcGIS. 64-bit background geoprocessing is also available for older versions at http://resources.arcgis.com/en/help/main/10.1/index.html#/Background_Geoprocessing_64_bit/002100000040000000/.
 
-2. �	�numpy�, �scipy�, �Scikit-learn�, and �matplotlib� libraries.
+2. 	numpy, scipy, Scikit-learn, and matplotlib libraries.
 
 
 ## B. Code structure
 
-1. �main.py� is the file for setting the parameters and running the code.
+1. main.py is the file for setting the parameters and running the code.
 
-2. �Wet_Channel_Extraction.py� is the main code which calls the functions from �Wet_Extraction_Fun.py� to delineate wet segments.
+2. Wet_Channel_Extraction.py is the main code which calls the functions from Wet_Extraction_Fun.py to delineate wet segments.
 
-3. �Pre_Processing.py� contains the functions to fix the extent of the input rasters.
+3. Pre_Processing.py contains the functions to fix the extent of the input rasters.
 
 
 ## C. Inputs
 
-Before running the code, there are some parameters which should be set in �Run.py� including.
+Before running the code, there are some parameters which should be set in Run.py including.
 
 1. The path to the bare-earth DEM (ground_DEM).
 
@@ -29,9 +29,9 @@ Before running the code, there are some parameters which should be set in �Run
 
 3. The path to the intensity  raster (int_raster)
 
-4. The path to the flow direction grid (flowdir_raster) and valley network (valley_raster). These two rasters can be extracted using the the code available at https://github.com/MiladHooshyar/DrainageNetworkExtraction.git and are saved as �Modified_Fdir_8.tif� and �valley_network.tif�, respectively.
+4. The path to the flow direction grid (flowdir_raster) and valley network (valley_raster). These two rasters can be extracted using the the code available at https://github.com/MiladHooshyar/DrainageNetworkExtraction.git and are saved as Modified_Fdir_8.tif and valley_network.tif, respectively.
 
-5. The unit of the DEM (unit). It is �m� for meter and �ft� for feet.
+5. The unit of the DEM (unit). It is m for meter and ft for feet.
 
 6. The size of the DEM in meters (pix_per_m).
 
@@ -46,8 +46,8 @@ Before running the code, there are some parameters which should be set in �Run
 11. The maximum distance between two erroneously disconnected segment (max_gap).
 
 
-After setting the parameters, one can execute �Run.py� to extract the wet segments. The output files will be saved in a folder called �wet_output� in the specified Output folder path. �comb_wet.tif� and �wet_connected.tif� are original and connected wet segments, respectively.
+After setting the parameters, one can execute Run.py to extract the wet segments. The output files will be saved in a folder called wet_output in the specified Output folder path. comb_wet.tif and wet_connected.tif are original and connected wet segments, respectively.
 
 ## D. Publications
 
-1. Hooshyar, M., S. Kim, D. Wang, and S. C. Medeiros (2015), Wet channel network extraction by integrating LiDAR intensity and elevation data, Water Resour. Res., 51, 10029�10046, doi:10.1002/2015WR018021.
+1. Hooshyar, M., S. Kim, D. Wang, and S. C. Medeiros (2015), Wet channel network extraction by integrating LiDAR intensity and elevation data, Water Resour. Res., 51, 1002910046, doi:10.1002/2015WR018021.
